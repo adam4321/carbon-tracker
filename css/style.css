@@ -3,10 +3,19 @@
 *************************************************************/
 
 #foot-logo {
-    width: 20px;
+    height: 70px;
 }
 
 #login-box {
+    width: 1000px;
+    margin-top: 80px;
+    margin-left: 430px;
+}
+
+#email {
     width: 400px;
 }
 
+#password {
+    width: 400px;
+}

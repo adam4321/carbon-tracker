@@ -134,6 +134,7 @@ function initApp() {
             var uid = user.uid;
             var providerData = user.providerData;
             // [START_EXCLUDE]
+            console.log(user);
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
             document.getElementById('quickstart-sign-in').textContent = 'Sign out';
             document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
@@ -144,6 +145,7 @@ function initApp() {
         } else {
             // User is signed out.
             // [START_EXCLUDE]
+            console.log(user);
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
             document.getElementById('quickstart-sign-in').textContent = 'Sign in';
             document.getElementById('quickstart-account-details').textContent = 'null';
