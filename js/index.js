@@ -1,5 +1,7 @@
 /*******************************************************
-** Description:  
+** Description:  Authentication service which signs up
+                 users and then sends them to a backend 
+                 service on another url when logged in
 *******************************************************/
 
 /************************************
