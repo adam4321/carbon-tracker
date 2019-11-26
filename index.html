@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-  <link rel="shortcut icon" href="./images/favicon.ico"/>
+  <link type="image/x-icon" rel="shortcut icon" href="./images/favicon.ico"/>
   <link type="text/css" rel="stylesheet" href="./css/style.css">
 
     <!-- Import and configure the Firebase SDK -->
@@ -81,10 +81,10 @@
             <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
 
             <!-- Container where we'll display the user details -->
-            <div class="quickstart-user-details-container">
-                Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-                <div>Firebase auth <code>currentUser</code> object value:</div>
-                <pre><code id="quickstart-account-details">null</code></pre>
+            <div class="quickstart-user-details-container" id="login-status">
+                User sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+                <!-- <div>Auth <code>currentUser</code> object value:</div>
+                <pre><code id="quickstart-account-details">null</code></pre> -->
             </div>
             </div>
         </div>

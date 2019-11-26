@@ -134,13 +134,23 @@ function initApp() {
             var uid = user.uid;
             var providerData = user.providerData;
             // [START_EXCLUDE]
-            console.log(user);
+            console.log(user.providerData);
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
             document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-            document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+            // document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
             if (!emailVerified) {
                 document.getElementById('quickstart-verify-email').disabled = false;
             }
+            // Create query string for GET request
+            let currentUser = new URLSearchParams(user.providerData[0]).toString()
+            // URL with query string
+            // let url = "http://localhost:5000/" + currentUser;
+            let url = "http://localhost:5000/";                  // blank URL for testing
+            // Clear out user and sign-out before changing URL
+            user = null;
+            toggleSignIn();
+            // Change URL to user backend node server
+            window.location.href = url;
             // [END_EXCLUDE]
         } else {
             // User is signed out.
@@ -148,7 +158,7 @@ function initApp() {
             console.log(user);
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
             document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-            document.getElementById('quickstart-account-details').textContent = 'null';
+            // document.getElementById('quickstart-account-details').textContent = 'null';
             // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
@@ -163,5 +173,6 @@ function initApp() {
 }
 
 window.onload = function() {
+    firebase.auth().signOut();
     initApp();
 };
