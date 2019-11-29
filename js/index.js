@@ -145,12 +145,15 @@ function initApp() {
             }
             // Create query string for GET request
             let currentUser = new URLSearchParams(user.providerData[0]).toString()
+                 
             // URL with query string
-            // let url = "http://localhost:5000/" + currentUser;
-            let url = "http://localhost:5000/";                  // blank URL for testing
+            // let url = "http://flip3.engr.oregonstate.edu:7994/";     // blank URL for testing
+            let url = "http://flip3.engr.oregonstate.edu:7994/?" + currentUser;
+
             // Clear out user and sign-out before changing URL
             user = null;
             toggleSignIn();
+
             // Change URL to user backend node server
             window.location.href = url;
             // [END_EXCLUDE]
@@ -160,7 +163,6 @@ function initApp() {
             console.log(user);
             document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
             document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-            // document.getElementById('quickstart-account-details').textContent = 'null';
             // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
