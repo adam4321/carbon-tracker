@@ -122,19 +122,18 @@ function initApp() {
             document.getElementById('sign-in').textContent = 'Sign out';
 
             // Create query string for GET request
-            console.log(user.providerData);
-            // let currentUser = new URLSearchParams(user.providerData[0]).toString()
-            // let url = "https://localhost:5500";
+            let currentUser = {uid: user.providerData[0].uid};
+            currentUser = new URLSearchParams(currentUser).toString();
 
             // URL with query string
-            // let url = "http://flip3.engr.oregonstate.edu:7994/?" + currentUser;
+            let url = "http://flip3.engr.oregonstate.edu:7994/?" + currentUser;
 
             // Clear out user and sign-out before changing URL
-            // user = null;
-            // toggleSignIn();
+            user = null;
+            toggleSignIn();
 
             // Change URL to user backend node server
-            // window.location.href = url;
+            window.location.href = url;
             // [END_EXCLUDE]
         } else {
             // User is signed out.
