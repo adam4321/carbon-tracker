@@ -122,7 +122,7 @@ function initApp() {
 
             // [START node server connection test]
             function ifServerOnline(ifOnline, ifOffline) {
-                var img = document.body.appendChild(document.createElement("img"));
+                let img = document.body.appendChild(document.createElement("img"));
                 img.onload = function() {
                     ifOnline && ifOnline.constructor == Function && ifOnline();
                 };
