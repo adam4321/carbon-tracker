@@ -1,3 +1,3 @@
-# carbon-tracker
+# Authentication service
 
 Group 2 fall 2019 cs361 carbon footprint tracking application
