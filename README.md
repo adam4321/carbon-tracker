@@ -1,15 +1,13 @@
-# Authentication service for co2 tracking application
-
-Group 2 fall 2019 cs361 carbon footprint tracking application
+# Group 2 fall 2019 cs361 carbon footprint tracking application
 
 ## Authorization Screen
 
-![Authorization screen](https://imgur.com/T2rW3M4)
+![Authorization screen](https://imgur.com/T2rW3M4.png)
 
 ## User Dashboard
 
-![User Dashboard](https://imgur.com/ribo912)
+![User Dashboard](https://imgur.com/ribo912.png)
 
 ## User Update
 
-![User Update](https://imgur.com/undefined)
+![User Update](https://imgur.com/zYP4XiM.png)
